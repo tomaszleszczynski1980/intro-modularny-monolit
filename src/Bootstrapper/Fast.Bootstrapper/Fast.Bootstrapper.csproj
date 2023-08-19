@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Drivers\Fast.Drivers.Api\Fast.Drivers.Api.csproj" />
+    <ProjectReference Include="..\..\Pricings\Fast.Pricings.Api\Fast.Pricings.Api.csproj" />
+    <ProjectReference Include="..\..\Rides\Fast.Rides.Api\Fast.Rides.Api.csproj" />
+    <ProjectReference Include="..\..\Shared\Fast.Shared\Fast.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

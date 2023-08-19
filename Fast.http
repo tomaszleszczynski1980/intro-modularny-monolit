@@ -1,0 +1,23 @@
+@url = http://localhost:5000
+@rideId = 00000000-0000-0000-0000-000000000000
+
+###
+GET {{url}}
+
+###
+POST {{url}}/drivers
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "vehicle": "Audi A1"
+}
+
+###
+POST {{url}}/rides
+Content-Type: application/json
+
+{
+    "from": "Starowislna 1",
+    "to": "Karmelicka 1"
+}
