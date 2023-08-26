@@ -22,8 +22,8 @@ internal static class Extensions
 
         api.MapPost("", (RequestRide command, RidesService service) =>
         {
-            service.Request(command);
-            return Results.Ok();
+            var request = service.Request(command);
+            return Results.Ok(request);
         });
         
         return routeBuilder;
