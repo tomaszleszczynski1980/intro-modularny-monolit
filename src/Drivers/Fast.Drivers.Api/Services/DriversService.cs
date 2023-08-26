@@ -1,6 +1,6 @@
 using Fast.Customers.Api.Commands;
-using Fast.Customers.Api.DTO;
 using Fast.Customers.Api.Entities;
+using Fast.Customers.Shared.DTO;
 
 namespace Fast.Customers.Api.Services;
 

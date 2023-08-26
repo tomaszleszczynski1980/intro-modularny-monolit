@@ -1,5 +1,6 @@
 using Fast.Customers.Api.Commands;
 using Fast.Customers.Api.Services;
+using Fast.Customers.Shared;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
@@ -12,6 +13,7 @@ internal static class Extensions
     public static IServiceCollection AddDrivers(this IServiceCollection services)
     {
         services.AddSingleton<DriversService>();
+        services.AddSingleton<IDriversModule, DriversModule>();
 
         return services;
     }
