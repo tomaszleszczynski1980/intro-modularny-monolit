@@ -8,6 +8,7 @@ internal static class Extensions
 {
     public static IServiceCollection AddPricings(this IServiceCollection services)
     {
+        services.AddHostedService<EventsHandler>();
         services.AddSingleton<PricingEngine>();
         services.AddSingleton<IPricingModule, PricingModule>();
         

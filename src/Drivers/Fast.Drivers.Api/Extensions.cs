@@ -22,9 +22,10 @@ internal static class Extensions
     {
         var api = routeBuilder.MapGroup("drivers");
 
-        api.MapPost("", (RegisterDriver command, DriversService service) =>
+        api.MapPost("", (RegisterDriver command, DriversService service, IDriversModule driversModule) =>
         {
-            service.Register(command);
+            var driverId = service.Register(command);
+            ((DriversModule) driversModule).PublishDriverRegistered(driverId);
             return Results.NoContent();
         });
 
